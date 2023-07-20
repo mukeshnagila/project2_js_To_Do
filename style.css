@@ -1,0 +1,195 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;500&family=Roboto+Condensed:ital@1&family=Rubik:ital,wght@0,400;1,300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: black;
+    color: aliceblue;
+    font: italic;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.perent{
+    filter: blur(3px);
+}
+
+.button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(63, 61, 173);
+    cursor: pointer;
+}
+
+.List{
+    font-weight: lighter;
+    font-size: 35px;
+}
+
+.main{
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+}
+
+.popupbox{
+    position: fixed;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(31, 75, 75);
+    padding: 40px 10px;
+    border: 3px solid red;
+    box-shadow: 3px 5px 10px red;
+    top: 30%;   
+    left: 40%;
+    width: 300px;
+    line-height: 25px;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+.btn{
+    border-radius: 10px;
+    text-align: center;
+    background-color: orangered;
+    color: aliceblue;
+    width: 80px;
+    height: 35px;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input{
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    padding: 20px 54px;
+}
+
+.card{
+    width: 300px;
+    min-height: 320px;
+    background-color: beige;
+    color: rgb(176, 40, 147);
+    border: 3px solid rgb(122, 107, 107);
+    box-shadow: 3px 4px 6px gray;
+    text-align: center;
+}
+
+.itemlist{
+    min-height: 250px;
+    align-items: center;
+}
+
+.buttonremove{
+    float:right;
+    cursor: pointer;
+    margin-right: 11px;
+    margin-top: 3px;
+}
+.delicon{
+    width: 25px;
+    height: 25px;
+}
+
+.buttonadd{
+    width: 23px;
+    height: 23px;
+    background-color: blueviolet;
+    box-shadow: 2px 3px 5px;
+    cursor: pointer;
+    float:right;
+    margin-right: 15px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+.markbtn{
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+    background-color: blue;
+    padding: 0px 5px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.markbtnhide{
+    display: none;
+}
+
+.cutelement {
+    text-decoration: line-through rgb(190, 22, 22);
+    text-decoration-style: solid;
+    text-decoration-thickness: 3px;
+  }
+
+  p{
+    display: inline-block;
+  }
+
+  .afterclickp{
+    color: red;
+  }
+/* Item Cord popup css*/
+
+.iteminput{
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.itempopupbox{
+    position: fixed;
+    text-align: center;
+    margin: auto;
+    background-color: rgb(31, 75, 75);
+    padding: 30px 10px;
+    border: 3px solid red;
+    box-shadow: 3px 5px 10px red;
+    top: 30%;   
+    left: 40%;
+}
+
+
+@media only screen and (min-width:100px) and (max-width:750px) {
+
+    .popupbox{
+        top: 30%;   
+        left: 8%;
+        right: 8%;
+    }
+
+    .itempopupbox{
+        top: 30%;   
+        left: 8%;
+        right: 8%;
+    }
+
+}
