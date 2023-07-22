@@ -1,25 +1,179 @@
 
+// const AddPopupBox = document.getElementById("popup");
+// const container = document.getElementById("flexcontainer");
+// const cardheading = document.getElementById("cardheading");
+// let cardID = 0;
+
+// function addpopup() {
+//   AddPopupBox.classList.remove("hide");
+//   var blurcard = document.getElementById("blurcard");
+
+//   blurcard.classList.add("perent");
+// }
+
+// function removepopup() {
+//   AddPopupBox.classList.add("hide");
+//   var blurcard = document.getElementById("blurcard");
+
+//   blurcard.classList.remove("perent");
+// }
+
+// function addcard() {
+//   cardID++;
+//   var newcard = document.createElement("div");
+//   var heading = document.createElement("h2");
+//   var hrline = document.createElement("hr");
+//   var itemlist = document.createElement("div");
+//   var hrlinelist = document.createElement("hr");
+//   var buttonadd = document.createElement("button");
+//   var buttonremove = document.createElement("div");
+
+//   newcard.appendChild(heading);
+//   newcard.appendChild(hrline);
+//   newcard.appendChild(itemlist);
+//   newcard.appendChild(hrlinelist);
+//   newcard.appendChild(buttonadd);
+//   newcard.appendChild(buttonremove);
+
+//   newcard.setAttribute("id", cardID);
+//   container.appendChild(newcard);
+
+//   itemlist.classList.add("itemlist");
+//   newcard.classList.add("card");
+//   buttonadd.classList.add("buttonadd");
+//   buttonremove.classList.add("buttonremove");
+
+//   var delicon = document.createElement("img");
+//   buttonremove.appendChild(delicon);
+//   delicon.src = "./delete_icon.png";
+//   delicon.classList.add("delicon");
+
+//   buttonadd.addEventListener("click",function(){
+//     itempopup2("itemlist");
+//     var blurcard = document.getElementById("blurcard");
+
+//     blurcard.classList.add("perent");
+//   })
+
+//   heading.innerHTML = cardheading.value;
+//   buttonadd.innerHTML = "+";
+//   //buttonremove.innerHTML = "Delete";
+
+//   buttonremove.addEventListener("click", function () {
+//     newcard.remove();
+//   });
+
+
+// /////////////// Add and hide ItemPopup Box Start ///////////////
+
+//   // const AddItempopup = document.getElementById("itempopup");
+
+//   // buttonadd.addEventListener("click", function () {
+//     // AddItempopup.classList.remove("hide");
+//     // var blurcard = document.getElementById("blurcard");
+
+//     // blurcard.classList.add("perent");
+//   // });
+
+//   // buttonremove.addEventListener("click", function () {
+//   //   AddItempopup.classList.add("hide");
+//   //   var blurcard = document.getElementById("blurcard");
+
+//   //   blurcard.classList.remove("perent");
+//   // });
+
+//   document.getElementById("cardheading").value = "";
+//   removepopup();
+// }
+
+// //////////Item Popup for add items /////////////
+
+// function itempopup2(itemlist){
+//   var itemdiv = document.createElement("div");
+//   var itemheading = document.createElement("h1");
+//   var iteminput = document.createElement("input");
+//   var itemdelbtn = document.createElement("button");
+//   var itemaddbtn = document.createElement("button");
+
+//   itemdiv.classList.add("itempopupbox");
+//   //itemdiv.classList.add("hide");
+//   iteminput.classList.add("iteminput");
+//   itemdelbtn.classList.add("btn");
+//   itemaddbtn.classList.add("btn");
+
+//   iteminput.textContent = "Add New Item";
+//   itemdelbtn.innerHTML = "Delete";
+//   itemaddbtn.innerHTML = "Add";
+// }
+
+
+
+
+
+// /////////////// Add and hide ItemPopup Box End ///////////////
+
+
+// // function removeitempopup() {
+// //   const AddItempopup = document.getElementById("itempopup");
+// //   AddItempopup.classList.add("hide");
+// //   var blurcard = document.getElementById("blurcard");
+// //   blurcard.classList.remove("perent");
+// // }
+
+// //const itempopup2 = document.getElementById("itempopup");
+
+// // function additem( ){
+// //     var itemlist = document.querySelector(".itemlist");
+// //     var newItemdiv = document.createElement("div");
+// //     var newItem = document.createElement("p");
+// //     var itemmarkbtn = document.createElement("button");
+// //     var itemheading = document.getElementById("itemheading");
+// //     newItem.textContent = itemheading.value;
+// //     itemmarkbtn.innerHTML= "Mark Item"
+
+// //     itemlist.appendChild(newItemdiv);
+// //     newItemdiv.appendChild(newItem);
+// //     newItemdiv.appendChild(itemmarkbtn);
+// //     itemmarkbtn.classList.add("markbtn");
+
+// //     document.getElementById("itemheading").value = "";
+// //     removeitempopup()
+
+// //     itemmarkbtn.addEventListener("click", function () {
+// //       newItem.classList.add("cutelement");
+// //       itemmarkbtn.classList.add("markbtnhide");
+// //       itemmarkbtn.classList.remove("markbtn");
+// //       newItem.classList.add("afterclickp");
+// //     });
+// // }
+
+
+////////////// again solve all problem by sir approach /////////////
+
 const AddPopupBox = document.getElementById("popup");
 const container = document.getElementById("flexcontainer");
 const cardheading = document.getElementById("cardheading");
+const alldiv = document.getElementById("alldiv1");
 let cardID = 0;
+let ItemId = 0;
+let AddBtnID = 0;
 
 function addpopup() {
   AddPopupBox.classList.remove("hide");
   var blurcard = document.getElementById("blurcard");
-
   blurcard.classList.add("perent");
 }
 
 function removepopup() {
   AddPopupBox.classList.add("hide");
   var blurcard = document.getElementById("blurcard");
-
   blurcard.classList.remove("perent");
 }
 
 function addcard() {
   cardID++;
+  ItemId++;
+  AddBtnID++;
   var newcard = document.createElement("div");
   var heading = document.createElement("h2");
   var hrline = document.createElement("hr");
@@ -36,6 +190,8 @@ function addcard() {
   newcard.appendChild(buttonremove);
 
   newcard.setAttribute("id", cardID);
+  itemlist.setAttribute("id",ItemId);
+  buttonadd.setAttribute("id",AddBtnID);
   container.appendChild(newcard);
 
   itemlist.classList.add("itemlist");
@@ -48,70 +204,107 @@ function addcard() {
   delicon.src = "./delete_icon.png";
   delicon.classList.add("delicon");
 
+  buttonadd.addEventListener("click", function () {
+    itempopup2("itemlist");
+    var blurcard = document.getElementById("blurcard");
+    blurcard.classList.add("perent");
+  });
+
   heading.innerHTML = cardheading.value;
   buttonadd.innerHTML = "+";
-  //buttonremove.innerHTML = "Delete";
 
   buttonremove.addEventListener("click", function () {
     newcard.remove();
   });
-
-
-/////////////// Add and hide ItemPopup Box Start ///////////////
-
-  const AddItempopup = document.getElementById("itempopup");
-
-  buttonadd.addEventListener("click", function () {
-    AddItempopup.classList.remove("hide");
-    var blurcard = document.getElementById("blurcard");
-
-    blurcard.classList.add("perent");
-  });
-
-  buttonremove.addEventListener("click", function () {
-    AddItempopup.classList.add("hide");
-    var blurcard = document.getElementById("blurcard");
-
-    blurcard.classList.remove("perent");
-  });
-
+  
   document.getElementById("cardheading").value = "";
   removepopup();
 }
-/////////////// Add and hide ItemPopup Box End ///////////////
 
+// const itempop2 = document.getElementById("itempop2");
 
-function removeitempopup() {
-  const AddItempopup = document.getElementById("itempopup");
-  AddItempopup.classList.add("hide");
-  var blurcard = document.getElementById("blurcard");
-  blurcard.classList.remove("perent");
+// function Showitempop2(){
+//   itempop2.classList.add("hide");
+// }
+// function hideitempop2(){
+//   itempop2.classList.remove("hide");
+// }
+
+function itempopup2(itemlist) {
+  //var maindiv = document.createElement("div")
+  var itemdiv = document.createElement("div");
+  var itemheading = document.createElement("h1");
+  var inputdiv = document.createElement("div");
+  var iteminput = document.createElement("input");
+  var itemdelbtn = document.createElement("button");
+  var itemaddbtn = document.createElement("button");
+
+  //maindiv.classList.add("maindiv");
+  itemdiv.classList.add("itempopupbox");
+  iteminput.classList.add("iteminput");
+  itemdelbtn.classList.add("btn");
+  itemdelbtn.classList.add("btnitemdel");
+  itemaddbtn.classList.add("btn");
+  itemaddbtn.classList.add("btnitemadd");
+  
+  itemdiv.setAttribute("id" ,'itempop2');
+  iteminput.setAttribute("id",'itemadding');
+  iteminput.setAttribute("placeholder",'Add New Item')
+  
+  itemheading.textContent = "Add New Item";
+  itemdelbtn.innerHTML = "close";
+  itemaddbtn.innerHTML = "Add";
+  
+  itemheading.style.fontSize = "26px"
+  
+  alldiv.appendChild(itemdiv);
+  //maindiv.appendChild(itemdiv);
+  inputdiv.appendChild(iteminput);
+  itemdiv.appendChild(itemheading);
+  itemdiv.appendChild(inputdiv);
+  itemdiv.appendChild(itemdelbtn);
+  itemdiv.appendChild(itemaddbtn);
+
+  itemdelbtn.addEventListener("click",function(){
+    itemdiv.remove();
+    var blurcard = document.getElementById("blurcard");
+    blurcard.classList.remove("perent");
+  })
+
+  function removeItemDiv() {
+    itemdiv.remove();
+    var blurcard = document.getElementById("blurcard");
+    blurcard.classList.remove("perent");
+  }
+
+  const itemadding = document.getElementById("itemadding");
+
+  itemaddbtn.addEventListener("click",function(){
+        var itemlist = document.querySelector(".itemlist");
+        var newItemdiv = document.createElement("div");
+        var newItem = document.createElement("p");
+        var itemmarkbtn = document.createElement("button");
+
+        newItem.textContent = itemadding.value;
+        itemmarkbtn.innerHTML= "Mark Item"
+    
+        itemlist.appendChild(newItemdiv);
+        newItemdiv.appendChild(newItem);
+        newItemdiv.appendChild(itemmarkbtn);
+        itemmarkbtn.classList.add("markbtn");
+    
+        document.getElementById("itemadding").value = "";
+    
+        itemmarkbtn.addEventListener("click", function () {
+        newItem.classList.add("cutelement");
+        itemmarkbtn.classList.add("markbtnhide");
+        itemmarkbtn.classList.remove("markbtn");
+        newItem.classList.add("afterclickp");
+        
+  })
+      Promise.resolve().then(removeItemDiv);
+})
+
 }
 
-const itempopup2 = document.getElementById("itempopup");
-
-function additem( ){
-    var itemlist = document.querySelector(".itemlist");
-    var newItemdiv = document.createElement("div");
-    var newItem = document.createElement("p");
-    var itemmarkbtn = document.createElement("button");
-    var itemheading = document.getElementById("itemheading");
-    newItem.textContent = itemheading.value;
-    itemmarkbtn.innerHTML= "Mark Item"
-
-    itemlist.appendChild(newItemdiv);
-    newItemdiv.appendChild(newItem);
-    newItemdiv.appendChild(itemmarkbtn);
-    itemmarkbtn.classList.add("markbtn");
-
-    document.getElementById("itemheading").value = "";
-    removeitempopup()
-
-    itemmarkbtn.addEventListener("click", function () {
-      newItem.classList.add("cutelement");
-      itemmarkbtn.classList.add("markbtnhide");
-      itemmarkbtn.classList.remove("markbtn");
-      newItem.classList.add("afterclickp");
-    });
-}
 

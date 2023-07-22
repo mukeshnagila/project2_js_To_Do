@@ -8,40 +8,41 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>  
-        <div id="blurcard">
-                <div class="header">
-                    <h1 class="main">Tasks <span class="List">List</span></h1>
-                    <p><button onclick="addpopup()" class="button"><i class="fas fa-plus"></i></button> Add Item</p>  
-                </div><hr>
+                <div class="alldiv" id="alldiv1">        
+                        <div id="blurcard">
+                                <div class="header">
+                                <h1 class="main">Tasks <span class="List">List</span></h1>
+                                <p><button onclick="addpopup()" class="button"><i class="fas fa-plus"></i></button> Add Item</p>  
+                                </div><hr>
 
-                <!-- Flex box start here -->
-                <div id="flexcontainer" class="container"></div>
-                
-                <!-- Flex box end here -->
-        </div>        
+                                <!-- Flex box start here -->
+                                <div id="flexcontainer" class="container"></div>
+                                
+                                <!-- Flex box end here -->
+                        </div>        
 
-        <!-- main popup part start here-->
+                        <!-- main popup part start here-->
 
-        <div id="popup" class="popupbox hide">
-                <h>Add New List</h><br><br>
-                <input id="cardheading" type="text" class="input"><br><br>
-                <button onclick="addcard()" class="btn">Add</button>&nbsp &nbsp
-                <button onclick="removepopup()" class="btn">Close</button>
-        </div>
+                        <div id="popup" class="popupbox hide">
+                                <h>Add New List</h><br><br>
+                                <input id="cardheading" type="text" class="input" placeholder="Add New List"><br><br>
+                                <button onclick="addcard()" class="btn">Add</button>&nbsp &nbsp
+                                <button onclick="removepopup()" class="btn">Close</button>
+                        </div>
 
-        <!-- main popup part end here-->
-         
-        <!-- Add Item popup start here-->
-        
-        <div id="itempopup" class="itempopupbox hide">
-                <h>Add New Item</h><br><br>
-                <input id="itemheading" type="text" class="iteminput" placeholder="Add New Item"><br><br>
-                <button id="itemaddbtn" onclick="additem()" class="btn">Add</button>&nbsp &nbsp
-                <button onclick="removeitempopup()" class="btn">Close</button>
-        </div>   
+                        <!-- main popup part end here-->
+                        
+                        <!-- Add Item popup start here-->
+                        
+                        <!-- <div id="itempopup" class="itempopupbox hide">
+                                <h>Add New Item</h><br><br>
+                                <input id="itemheading" type="text" class="iteminput" placeholder="Add New Item"><br><br>
+                                <button id="itemaddbtn" onclick="additem()" class="btn">Add</button>&nbsp &nbsp
+                                <button onclick="removeitempopup()" class="btn">Close</button>
+                        </div>    -->
 
-        <!-- Add Item popup end here-->
-
+                        <!-- Add Item popup end here-->
+                </div>        
 
 
 

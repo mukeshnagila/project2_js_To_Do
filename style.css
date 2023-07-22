@@ -57,6 +57,23 @@ body{
     line-height: 25px;
 }
 
+input{
+    display: inline-block;
+}
+
+.btnitemdel{
+    margin: 2px 10px;
+    position: relative;
+    top: 17px;
+    right: 5px;
+}
+.btnitemadd{
+    margin: 2px 10px;
+    position: relative;
+    top: 17px;
+    left: 5px;
+}
+
 .show{
     display: block;
 }
