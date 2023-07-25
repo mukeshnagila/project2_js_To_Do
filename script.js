@@ -153,6 +153,7 @@
 const AddPopupBox = document.getElementById("popup");
 const container = document.getElementById("flexcontainer");
 const cardheading = document.getElementById("cardheading");
+const cardheading2 = document.getElementById("cardheading2");
 const alldiv = document.getElementById("alldiv1");
 var cardID = 0;
 let ItemId = 0;
@@ -189,6 +190,7 @@ function addcard() {
   newcard.appendChild(buttonadd);
   newcard.appendChild(buttonremove);
 
+  heading.setAttribute("onclick", "backpagefunction()");
   newcard.setAttribute("id", cardID);
   itemlist.setAttribute("id", ItemId);
   buttonadd.setAttribute("id", AddBtnID);
@@ -279,6 +281,14 @@ function addcard() {
   document.getElementById("cardheading").value = "";
   removepopup();
 
+
+  ////for next page function
+  
+  // heading.addEventListener("click", function () {
+  //   backpagefunction(newcard);
+  // });
+  heading.addEventListener("click", backpagefunction);
+
 }
 
 function itemaddnew(itemlist) {
@@ -304,4 +314,37 @@ function itemaddnew(itemlist) {
     newItem.classList.add("afterclickp");
   })
 
+}
+
+///////////// For Saperate page ///////////////
+// function backpagefunction(){
+//     var alldiv1hide = document.getElementById("alldiv1");
+//     var newbackdiv = document.getElementById("sapratediv");
+//     var cardheading2 = document.getElementById("cardheading2");
+
+//     alldiv1hide.classList.add("alldivhide");
+//     newbackdiv.classList.add("sapratedivshow");
+//     newbackdiv.classList.remove("sapratedivhide");
+
+//     cardheading2.innerText = cardheading.innerHTML;
+// }
+// ... Existing code ...
+
+function backpagefunction(event) {
+  var alldiv1hide = document.getElementById("alldiv1");
+  var newbackdiv = document.getElementById("sapratediv");
+  var cardheading2 = document.getElementById("cardheading2");
+
+  alldiv1hide.classList.add("alldivhide");
+  newbackdiv.classList.remove("sapratedivhide");
+
+  cardheading2.innerText = event.target.innerHTML;
+}
+
+function backthis(){
+  var alldiv1hide = document.getElementById("alldiv1");
+  var newbackdiv = document.getElementById("sapratediv");
+
+  alldiv1hide.classList.remove("alldivhide");
+  newbackdiv.classList.add("sapratedivhide");
 }
