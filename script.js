@@ -283,7 +283,7 @@ function addcard() {
 
 
   ////for next page function
-  
+
   // heading.addEventListener("click", function () {
   //   backpagefunction(newcard);
   // });
@@ -334,11 +334,14 @@ function backpagefunction(event) {
   var alldiv1hide = document.getElementById("alldiv1");
   var newbackdiv = document.getElementById("sapratediv");
   var cardheading2 = document.getElementById("cardheading2");
+  var singlecard = document.getElementById("itemcarddiv");
 
   alldiv1hide.classList.add("alldivhide");
   newbackdiv.classList.remove("sapratedivhide");
 
+  
   cardheading2.innerText = event.target.innerHTML;
+  singlecard.appendChild(newcard);
 }
 
 function backthis(){
