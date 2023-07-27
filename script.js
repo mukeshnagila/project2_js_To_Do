@@ -183,6 +183,8 @@ function addcard() {
   var buttonadd = document.createElement("button");
   var buttonremove = document.createElement("div");
 
+  var blankmessage = document.getElementById("blankmessage");
+
   newcard.appendChild(heading);
   newcard.appendChild(hrline);
   newcard.appendChild(itemlist);
@@ -190,6 +192,7 @@ function addcard() {
   newcard.appendChild(buttonadd);
   newcard.appendChild(buttonremove);
 
+  blankmessage.classList.add("blankmessagehide");
   heading.setAttribute("onclick", "backpagefunction()");
   newcard.setAttribute("id", cardID);
   itemlist.setAttribute("id", ItemId);
@@ -342,6 +345,16 @@ function backpagefunction(event) {
   
   cardheading2.innerText = event.target.innerHTML;
   singlecard.appendChild(newcard);
+}
+
+function addpopup22(){
+  AddPopupBox.classList.remove("hide");
+  var alldiv1hide = document.getElementById("alldiv1");
+  var blurcard = document.getElementById("blurcard");
+  var newbackdiv = document.getElementById("sapratediv");
+  alldiv1hide.classList.remove("alldivhide")
+  newbackdiv.classList.add("sapratedivhide");
+  blurcard.classList.add("perent");
 }
 
 function backthis(){

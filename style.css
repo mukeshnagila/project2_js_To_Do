@@ -14,6 +14,19 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.blankmessagehide{
+    display: none;
+}
+.blankmessagevisible{
+    display: visible;
+}
+.message{
+    padding: 35px 70px;
+    color: aquamarine;
+    text-shadow: 5px 5px 15px;
+    font-style: italic;
+}
+
 .perent{
     filter: blur(3px);
 }
