@@ -193,7 +193,7 @@ function addcard() {
   newcard.appendChild(buttonremove);
 
   blankmessage.classList.add("blankmessagehide");
-  heading.setAttribute("onclick", "backpagefunction()");
+  //heading.setAttribute("onclick", "backpagefunction()");
   newcard.setAttribute("id", cardID);
   itemlist.setAttribute("id", ItemId);
   buttonadd.setAttribute("id", AddBtnID);
@@ -287,10 +287,23 @@ function addcard() {
 
   ////for next page function
 
-  // heading.addEventListener("click", function () {
-  //   backpagefunction(newcard);
-  // });
-  heading.addEventListener("click", backpagefunction);
+  heading.addEventListener("click", function () {
+      var alldiv1hide = document.getElementById("alldiv1");
+      var newbackdiv = document.getElementById("sapratediv");
+      var cardheading2 = document.getElementById("cardheading2");
+      var singlecard = document.getElementById("itemcarddiv");
+
+      alldiv1hide.classList.add("alldivhide");
+      newbackdiv.classList.remove("sapratedivhide");
+
+      cardheading2.innerText = heading.innerHTML;
+
+      const duplicateCard = newcard.cloneNode(true);
+      singlecard.appendChild(duplicateCard);
+  });
+  
+  
+  //heading.addEventListener("click", backpagefunction);
 
 }
 
@@ -333,19 +346,18 @@ function itemaddnew(itemlist) {
 // }
 // ... Existing code ...
 
-function backpagefunction(event) {
-  var alldiv1hide = document.getElementById("alldiv1");
-  var newbackdiv = document.getElementById("sapratediv");
-  var cardheading2 = document.getElementById("cardheading2");
-  var singlecard = document.getElementById("itemcarddiv");
+// function backpagefunction(event) {
+//   var alldiv1hide = document.getElementById("alldiv1");
+//   var newbackdiv = document.getElementById("sapratediv");
+//   var cardheading2 = document.getElementById("cardheading2");
+//   var singlecard = document.getElementById("itemcarddiv");
 
-  alldiv1hide.classList.add("alldivhide");
-  newbackdiv.classList.remove("sapratedivhide");
+//   alldiv1hide.classList.add("alldivhide");
+//   newbackdiv.classList.remove("sapratedivhide");
 
-  
-  cardheading2.innerText = event.target.innerHTML;
-  singlecard.appendChild(newcard);
-}
+//   cardheading2.innerText = event.target.innerHTML;
+//   singlecard.appendChild(newcard);
+// }
 
 function addpopup22(){
   AddPopupBox.classList.remove("hide");
@@ -360,7 +372,9 @@ function addpopup22(){
 function backthis(){
   var alldiv1hide = document.getElementById("alldiv1");
   var newbackdiv = document.getElementById("sapratediv");
+  var itemcarddivempty = document.getElementById("itemcarddiv"); 
 
   alldiv1hide.classList.remove("alldivhide");
+  itemcarddivempty.innerHTML=""
   newbackdiv.classList.add("sapratedivhide");
 }
