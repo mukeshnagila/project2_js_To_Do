@@ -1,154 +1,5 @@
+// New Approch by me///////
 
-// // // const AddPopupBox = document.getElementById("popup");
-// // // const container = document.getElementById("flexcontainer");
-// // // const cardheading = document.getElementById("cardheading");
-// // // let cardID = 0;
-
-// // // function addpopup() {
-// // //   AddPopupBox.classList.remove("hide");
-// // //   var blurcard = document.getElementById("blurcard");
-
-// // //   blurcard.classList.add("perent");
-// // // }
-
-// // // function removepopup() {
-// // //   AddPopupBox.classList.add("hide");
-// // //   var blurcard = document.getElementById("blurcard");
-
-// // //   blurcard.classList.remove("perent");
-// // // }
-
-// // // function addcard() {
-// // //   cardID++;
-// // //   var newcard = document.createElement("div");
-// // //   var heading = document.createElement("h2");
-// // //   var hrline = document.createElement("hr");
-// // //   var itemlist = document.createElement("div");
-// // //   var hrlinelist = document.createElement("hr");
-// // //   var buttonadd = document.createElement("button");
-// // //   var buttonremove = document.createElement("div");
-
-// // //   newcard.appendChild(heading);
-// // //   newcard.appendChild(hrline);
-// // //   newcard.appendChild(itemlist);
-// // //   newcard.appendChild(hrlinelist);
-// // //   newcard.appendChild(buttonadd);
-// // //   newcard.appendChild(buttonremove);
-
-// // //   newcard.setAttribute("id", cardID);
-// // //   container.appendChild(newcard);
-
-// // //   itemlist.classList.add("itemlist");
-// // //   newcard.classList.add("card");
-// // //   buttonadd.classList.add("buttonadd");
-// // //   buttonremove.classList.add("buttonremove");
-
-// // //   var delicon = document.createElement("img");
-// // //   buttonremove.appendChild(delicon);
-// // //   delicon.src = "./delete_icon.png";
-// // //   delicon.classList.add("delicon");
-
-// // //   buttonadd.addEventListener("click",function(){
-// // //     itempopup2("itemlist");
-// // //     var blurcard = document.getElementById("blurcard");
-
-// // //     blurcard.classList.add("perent");
-// // //   })
-
-// // //   heading.innerHTML = cardheading.value;
-// // //   buttonadd.innerHTML = "+";
-// // //   //buttonremove.innerHTML = "Delete";
-
-// // //   buttonremove.addEventListener("click", function () {
-// // //     newcard.remove();
-// // //   });
-
-
-// // // /////////////// Add and hide ItemPopup Box Start ///////////////
-
-// // //   // const AddItempopup = document.getElementById("itempopup");
-
-// // //   // buttonadd.addEventListener("click", function () {
-// // //     // AddItempopup.classList.remove("hide");
-// // //     // var blurcard = document.getElementById("blurcard");
-
-// // //     // blurcard.classList.add("perent");
-// // //   // });
-
-// // //   // buttonremove.addEventListener("click", function () {
-// // //   //   AddItempopup.classList.add("hide");
-// // //   //   var blurcard = document.getElementById("blurcard");
-
-// // //   //   blurcard.classList.remove("perent");
-// // //   // });
-
-// // //   document.getElementById("cardheading").value = "";
-// // //   removepopup();
-// // // }
-
-// // // //////////Item Popup for add items /////////////
-
-// // // function itempopup2(itemlist){
-// // //   var itemdiv = document.createElement("div");
-// // //   var itemheading = document.createElement("h1");
-// // //   var iteminput = document.createElement("input");
-// // //   var itemdelbtn = document.createElement("button");
-// // //   var itemaddbtn = document.createElement("button");
-
-// // //   itemdiv.classList.add("itempopupbox");
-// // //   //itemdiv.classList.add("hide");
-// // //   iteminput.classList.add("iteminput");
-// // //   itemdelbtn.classList.add("btn");
-// // //   itemaddbtn.classList.add("btn");
-
-// // //   iteminput.textContent = "Add New Item";
-// // //   itemdelbtn.innerHTML = "Delete";
-// // //   itemaddbtn.innerHTML = "Add";
-// // // }
-
-
-
-
-
-// // // /////////////// Add and hide ItemPopup Box End ///////////////
-
-
-// // // // function removeitempopup() {
-// // // //   const AddItempopup = document.getElementById("itempopup");
-// // // //   AddItempopup.classList.add("hide");
-// // // //   var blurcard = document.getElementById("blurcard");
-// // // //   blurcard.classList.remove("perent");
-// // // // }
-
-// // // //const itempopup2 = document.getElementById("itempopup");
-
-// // // // function additem( ){
-// // // //     var itemlist = document.querySelector(".itemlist");
-// // // //     var newItemdiv = document.createElement("div");
-// // // //     var newItem = document.createElement("p");
-// // // //     var itemmarkbtn = document.createElement("button");
-// // // //     var itemheading = document.getElementById("itemheading");
-// // // //     newItem.textContent = itemheading.value;
-// // // //     itemmarkbtn.innerHTML= "Mark Item"
-
-// // // //     itemlist.appendChild(newItemdiv);
-// // // //     newItemdiv.appendChild(newItem);
-// // // //     newItemdiv.appendChild(itemmarkbtn);
-// // // //     itemmarkbtn.classList.add("markbtn");
-
-// // // //     document.getElementById("itemheading").value = "";
-// // // //     removeitempopup()
-
-// // // //     itemmarkbtn.addEventListener("click", function () {
-// // // //       newItem.classList.add("cutelement");
-// // // //       itemmarkbtn.classList.add("markbtnhide");
-// // // //       itemmarkbtn.classList.remove("markbtn");
-// // // //       newItem.classList.add("afterclickp");
-// // // //     });
-// // // // }
-
-
-////////////// again solve all problem by sir approach /////////////
 
 const AddPopupBox = document.getElementById("popup");
 const container = document.getElementById("flexcontainer");
@@ -170,6 +21,9 @@ function removepopup() {
   var blurcard = document.getElementById("blurcard");
   blurcard.classList.remove("perent");
 }
+
+
+/////////////////////// main card add function //////////////////
 
 function addcard() {
   cardID++;
@@ -214,6 +68,9 @@ function addcard() {
     blurcard.classList.add("perent");
     itempopup2();
   });
+
+
+  /////////////// add item popup start ///////////
 
   function itempopup2() {
     var itemdiv = document.createElement("div");
@@ -270,14 +127,16 @@ function addcard() {
       itemdiv.remove();
       var blurcard = document.getElementById("blurcard");
       blurcard.classList.remove("perent");
-  });
+    });
 
   }
 
   heading.innerHTML = cardheading.value;
   buttonadd.innerHTML = "+";
-
+  
   buttonremove.addEventListener("click", function () {
+    var cardheading2 = document.getElementById("cardheading2");
+    cardheading2.innerText = "";
     newcard.remove();
   });
 
@@ -285,30 +144,58 @@ function addcard() {
   removepopup();
 
 
-  ////for next page function
+  //////////////////////////////////////     for next page function start   /////////////////////////////////////////
 
   heading.addEventListener("click", function () {
-      var alldiv1hide = document.getElementById("alldiv1");
-      var newbackdiv = document.getElementById("sapratediv");
+      var tasklist = document.getElementById("tasklist");
+      var additemtext = document.getElementById("additemtext");
       var cardheading2 = document.getElementById("cardheading2");
-      var singlecard = document.getElementById("itemcarddiv");
+      var flexcontainer = document.getElementById("flexcontainer");
+      var itemcarddiv = document.getElementById("itemcarddiv");
+      var backbutton = document.getElementById("backthis");
+      var flexconthide = document.getElementById("flexconthide");
 
-      alldiv1hide.classList.add("alldivhide");
-      newbackdiv.classList.remove("sapratedivhide");
+      flexconthide.classList.add("hide");
+      backbutton.classList.remove("hide");
+      tasklist.classList.add("hide");
+      additemtext.classList.add("hide");
+      flexcontainer.classList.add("hide");
+      itemcarddiv.classList.remove("hide");
+      cardheading2.classList.remove("hide");
 
       cardheading2.innerText = heading.innerHTML;
 
-      const duplicateCard = newcard.cloneNode(true);
-      singlecard.appendChild(duplicateCard);
+      itemcarddiv.appendChild(newcard);
   });
-  
-  
-  //heading.addEventListener("click", backpagefunction);
 
+  var backthis = document.getElementById("backthis");
+
+  backthis.addEventListener("click", function (){
+    var tasklist = document.getElementById("tasklist");
+      var additemtext = document.getElementById("additemtext");
+      var cardheading2 = document.getElementById("cardheading2");
+      var flexcontainer = document.getElementById("flexcontainer");
+      var itemcarddiv = document.getElementById("itemcarddiv");
+      var backbutton = document.getElementById("backthis");
+      var flexconthide = document.getElementById("flexconthide");
+
+      flexconthide.classList.remove("hide");
+      backbutton.classList.add("hide");
+      tasklist.classList.remove("hide");
+      additemtext.classList.remove("hide");
+      flexcontainer.classList.remove("hide");
+      cardheading2.classList.add("hide");
+      itemcarddiv.classList.add("hide");
+      itemcarddiv.innerHTML = "";
+      container.appendChild(newcard);
+
+  });
+
+  //////////////////////////////   for next page function end   ///////////////////////////
 }
 
 function itemaddnew(itemlist) {
-  // var itemlist = document.querySelector(".itemlist");
+
   var newItemdiv = document.createElement("div");
   var newItem = document.createElement("p");
   var itemmarkbtn = document.createElement("button");
@@ -330,51 +217,4 @@ function itemaddnew(itemlist) {
     newItem.classList.add("afterclickp");
   })
 
-}
-
-///////////// For Saperate page ///////////////
-// function backpagefunction(){
-//     var alldiv1hide = document.getElementById("alldiv1");
-//     var newbackdiv = document.getElementById("sapratediv");
-//     var cardheading2 = document.getElementById("cardheading2");
-
-//     alldiv1hide.classList.add("alldivhide");
-//     newbackdiv.classList.add("sapratedivshow");
-//     newbackdiv.classList.remove("sapratedivhide");
-
-//     cardheading2.innerText = cardheading.innerHTML;
-// }
-// ... Existing code ...
-
-// function backpagefunction(event) {
-//   var alldiv1hide = document.getElementById("alldiv1");
-//   var newbackdiv = document.getElementById("sapratediv");
-//   var cardheading2 = document.getElementById("cardheading2");
-//   var singlecard = document.getElementById("itemcarddiv");
-
-//   alldiv1hide.classList.add("alldivhide");
-//   newbackdiv.classList.remove("sapratedivhide");
-
-//   cardheading2.innerText = event.target.innerHTML;
-//   singlecard.appendChild(newcard);
-// }
-
-function addpopup22(){
-  AddPopupBox.classList.remove("hide");
-  var alldiv1hide = document.getElementById("alldiv1");
-  var blurcard = document.getElementById("blurcard");
-  var newbackdiv = document.getElementById("sapratediv");
-  alldiv1hide.classList.remove("alldivhide")
-  newbackdiv.classList.add("sapratedivhide");
-  blurcard.classList.add("perent");
-}
-
-function backthis(){
-  var alldiv1hide = document.getElementById("alldiv1");
-  var newbackdiv = document.getElementById("sapratediv");
-  var itemcarddivempty = document.getElementById("itemcarddiv"); 
-
-  alldiv1hide.classList.remove("alldivhide");
-  itemcarddivempty.innerHTML=""
-  newbackdiv.classList.add("sapratedivhide");
 }

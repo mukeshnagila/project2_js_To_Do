@@ -8,16 +8,28 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>  
+                <!-- new approch by me  -->
+
                 <div class="alldiv" id="alldiv1">        
                         <div id="blurcard">
                                 <div class="header">
-                                <h1 class="main">Tasks <span class="List">List</span></h1>
-                                <p><button onclick="addpopup()" class="button"><i class="fas fa-plus"></i></button> Add Item</p>  
+                                <h1 class="main" id="tasklist">Tasks <span class="List">List</span></h1>
+
+                                <h1 class="main List backcursor hide" id="backthis"><img src="./back fafa.jpeg" class="backbtn">Back</h1>
+                                <h1 class="cardname" id="cardheading2"></h1>
+
+                                <p><button onclick="addpopup()" class="button"><i class="fas fa-plus"></i></button><span id="additemtext"> Add Item </span></p>  
                                 </div><hr>
 
                                 <h1 id="blankmessage" class="message">No Item's In The ToDo List........</h1>
                                 <!-- Flex box start here -->
-                                <div id="flexcontainer" class="container"></div>
+                                <div id="flexconthide">
+                                        <div id="flexcontainer" class="container"></div>
+                                </div>
+
+                                <div class="itemcarddiv hide" id="itemcarddiv">
+                               
+                                </div>
                                 
                                 <!-- Flex box end here -->
                         </div>        
@@ -31,29 +43,9 @@
                                 <button onclick="removepopup()" class="btn">Close</button>
                         </div>
 
-                        <!-- main popup part end here-->
-                        
-                        <!-- Add Item popup start here-->
-                        
-                        <!-- <div id="itempopup" class="itempopupbox hide">
-                                <h>Add New Item</h><br><br>
-                                <input id="itemheading" type="text" class="iteminput" placeholder="Add New Item"><br><br>
-                                <button id="itemaddbtn" onclick="additem()" class="btn">Add</button>&nbsp &nbsp
-                                <button onclick="removeitempopup()" class="btn">Close</button>
-                        </div>    -->
+                       
                 </div>
 
-                        <!-- Add Item popup end here-->
-                <div class="sapratedivhide" id="sapratediv">
-                        <div class="header2">
-                                <h1 class="main List backcursor" onclick="backthis()"><img src="./back fafa.jpeg" class="backbtn">Back</h1>
-                                <h1 class="cardname" id="cardheading2"></h1>
-                                <p><button onclick="addpopup22()" class="button"><i class="fas fa-plus"></i></button></p>  
-                        </div><hr>
-                        <div class="itemcarddiv" id="itemcarddiv">
-                               
-                        </div>
-                </div>        
 
 
     <script src="./script.js"></script>

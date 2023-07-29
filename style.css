@@ -20,6 +20,11 @@ body{
 .blankmessagevisible{
     display: visible;
 }
+
+.itempopupboxvisible{
+    display: visible;
+}
+
 .message{
     padding: 35px 70px;
     color: aquamarine;
@@ -29,6 +34,12 @@ body{
 
 .perent{
     filter: blur(3px);
+}
+.perent2{
+    filter: blur(3px);
+}
+.perenthide{
+    display: none;
 }
 
 .button{
