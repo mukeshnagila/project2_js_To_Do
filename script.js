@@ -6,6 +6,7 @@ const container = document.getElementById("flexcontainer");
 const cardheading = document.getElementById("cardheading");
 const cardheading2 = document.getElementById("cardheading2");
 const alldiv = document.getElementById("alldiv1");
+var backthis = document.getElementById("backthis");
 var cardID = 0;
 let ItemId = 0;
 let AddBtnID = 0;
@@ -137,7 +138,7 @@ function addcard() {
   buttonremove.addEventListener("click", function () {
     var cardheading2 = document.getElementById("cardheading2");
     cardheading2.innerText = "";
-    newcard.remove();
+    newcard.style.display = "none";
   });
 
   document.getElementById("cardheading").value = "";
@@ -152,11 +153,11 @@ function addcard() {
       var cardheading2 = document.getElementById("cardheading2");
       var flexcontainer = document.getElementById("flexcontainer");
       var itemcarddiv = document.getElementById("itemcarddiv");
-      var backbutton = document.getElementById("backthis");
+      // var backbutton = document.getElementById("backthis");
       var flexconthide = document.getElementById("flexconthide");
 
       flexconthide.classList.add("hide");
-      backbutton.classList.remove("hide");
+      backthis.classList.remove("hide");
       tasklist.classList.add("hide");
       additemtext.classList.add("hide");
       flexcontainer.classList.add("hide");
@@ -168,7 +169,6 @@ function addcard() {
       itemcarddiv.appendChild(newcard);
   });
 
-  var backthis = document.getElementById("backthis");
 
   backthis.addEventListener("click", function (){
     var tasklist = document.getElementById("tasklist");
@@ -176,11 +176,11 @@ function addcard() {
       var cardheading2 = document.getElementById("cardheading2");
       var flexcontainer = document.getElementById("flexcontainer");
       var itemcarddiv = document.getElementById("itemcarddiv");
-      var backbutton = document.getElementById("backthis");
+      //var backbutton = document.getElementById("backthis");
       var flexconthide = document.getElementById("flexconthide");
 
       flexconthide.classList.remove("hide");
-      backbutton.classList.add("hide");
+      backthis.classList.add("hide");
       tasklist.classList.remove("hide");
       additemtext.classList.remove("hide");
       flexcontainer.classList.remove("hide");
